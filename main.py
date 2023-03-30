@@ -1,14 +1,13 @@
 import boto3
 import os
-from dotenv import load_dotenv
 from settings import *
-load_dotenv()
+
 
 
 
 session = boto3.Session(
-    aws_access_key_id=os.getenv('ACCESS_KEY'),
-    aws_secret_access_key=os.getenv('SECRET_KEY'),
+    aws_access_key_id=os.'ACCESS_KEY',
+    aws_secret_access_key='SECRET_KEY',
     region_name= aws_region #Change in settings.py
 )
 
