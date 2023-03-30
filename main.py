@@ -5,20 +5,20 @@ from settings import *
 session = boto3.Session(
     aws_access_key_id= ACCESS_KEY,
     aws_secret_access_key= SECRET_KEY,
-    region_name= aws_region 
+    region_name= AWS_REGION
 )
 
 dynamodb = session.resource('dynamodb')
-table = dynamodb.Table(table_name)
+table = dynamodb.Table(TABLE_NAME)
 
 
 query_params = {
     'KeyConditionExpression': '#date = :pk_value',
     'ExpressionAttributeNames': {
-        '#date': table_pk 
+        '#date': TABLE_PK 
     }, 
     'ExpressionAttributeValues': {
-        ':pk_value': table_value_to_fetch 
+        ':pk_value': VALUE_TO_FETCH
     }
 }
 
