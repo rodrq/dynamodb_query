@@ -1,6 +1,8 @@
 # Settings
-
-aws_region = 'us-east-2'
-table_name = 'tracker_db'
-table_pk = 'date'
-table_value_to_fetch = '23-03-29'
+# Example data
+ACCESS_KEY = '12125235311x123'
+SECRET_KEY = '126576486544563456347xjae41123'
+AWS_REGION = 'us-east-2'
+TABLE_NAME = 'my_table'
+TABLE_PK = ' date'
+VALUE_TO_FETCH = '23-03-29'
