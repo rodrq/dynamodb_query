@@ -2,13 +2,10 @@ import boto3
 import os
 from settings import *
 
-
-
-
 session = boto3.Session(
-    aws_access_key_id=os.'ACCESS_KEY',
-    aws_secret_access_key='SECRET_KEY',
-    region_name= aws_region #Change in settings.py
+    aws_access_key_id= ACCESS_KEY,
+    aws_secret_access_key= SECRET_KEY,
+    region_name= aws_region 
 )
 
 dynamodb = session.resource('dynamodb')
